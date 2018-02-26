@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Practice_get_req_retrofit</string>
+    <string name="weather_api_key">14c1cc5ef95d40be95502d97785ba87f</string>
+</resources>

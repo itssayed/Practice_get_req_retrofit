@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="saidurrahman.practice_get_req_retrofit.MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/currentWeatherParentLayout"
+    >
+
+
+
+    <!-- Top part -->
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:orientation="horizontal"
+     android:layout_margin="4dp"
+     android:layout_weight="3">
+
+     <Button
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="2.5"
+         android:text="Show FORECAST"
+         android:textAllCaps="false"
+         android:textAlignment="center"
+         android:onClick="showForecastPage"
+         />
+
+
+            <!-- Location and time, inside first part -->
+     <RelativeLayout
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="4">
+         <TextView
+             android:id="@+id/locationTV"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text=""
+             android:textSize="26dp"
+             android:textAlignment="center"
+             android:layout_marginTop="4dp"
+             android:textColor="#FF000000"
+             />
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_below="@id/locationTV">
+             <TextView
+                 android:id="@+id/timeTV"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.75"
+                 android:text=""
+                 android:textSize="14dp"
+                 android:textAlignment="viewEnd"
+                 android:layout_marginTop="4dp"
+                 android:layout_marginRight="4dp"
+                 android:textColor="#FF000000"
+                 />
+             <TextView
+                 android:id="@+id/countryCodeTV"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.5"
+                 android:text=""
+                 android:textSize="14dp"
+                 android:textAlignment="viewStart"
+                 android:layout_marginTop="4dp"
+                 android:layout_marginLeft="0dp"
+                 android:textColor="#FF000000"
+                 />
+         </LinearLayout>
+     </RelativeLayout>
+             <!-- Location and time, inside first part ENDS-->
+
+     <Button
+         android:id="@+id/addLocationBtn"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="+"
+         android:onClick="changeCity"
+         />
+
+ </LinearLayout>
+    <!-- Top part ENDS-->
+
+
+
+
+
+
+
+    <!-- Bottom part -->
+    <LinearLayout
+        android:id="@+id/homePageTempLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_margin="4dp"
+        android:onClick="goToDetailsPage"
+        >
+            <!-- Weather logo and weather desc -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/weatherLogoIV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:scaleType="centerInside"
+                android:text="**sunny logo**" />
+
+            <TextView
+                android:id="@+id/weatherDescriptionTV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="SUNNY"
+                android:textColor="#FF000000"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <!-- Weather logo and weather desc ENDS-->
+
+
+
+            <!-- Max temp and Min temp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/maximumTempTV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="*max*"
+                android:gravity="top"
+                android:textSize="20sp"
+                android:textColor="#FF000000"
+                />
+            <TextView
+                android:id="@+id/minimumTempTV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:text="*min*"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:gravity="top"
+                android:textSize="20sp"
+                android:textColor="#FF000000"
+                />
+        </LinearLayout>
+             <!--  Max temp and Min temp ENDS-->
+
+
+
+             <!-- Average Temperature Starts -->
+
+            <TextView
+                android:id="@+id/averageTempTV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="72"
+                android:gravity="top"
+                android:textSize="84sp"
+                android:padding="8dp"
+                android:textColor="#FF000000"
+                />
+
+               <!-- Average Temperature ENDS -->
+
+    </LinearLayout>
+
+    <!-- Bottom part ENDS-->
+
+
+
+
+
+
+
+</LinearLayout>

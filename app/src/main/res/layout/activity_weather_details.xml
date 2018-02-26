@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/weatherbackpsd"
+        android:scaleType="centerCrop"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:layout_margin="10dp"
+        android:alpha=".35"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/mainLayout"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+
+        tools:context="saidurrahman.practice_get_req_retrofit.Data_For_Weather_Details.WeatherDetails">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#c6c6c6"
+            android:layout_height="0dp"
+            android:text="Details"
+            android:textSize="25sp"
+            android:layout_weight="0.15"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/weatherImageIV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/feelsLikeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Feels Like"
+                    android:textColor="#c6c6c6"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:id="@+id/humidityTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Humidity"
+                    android:textColor="#c6c6c6"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:id="@+id/visibilityTV"
+                    android:textColor="#c6c6c6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Visibility"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:id="@+id/uvIndexTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="#c6c6c6"
+                    android:text="UV Index"
+                    android:textSize="16dp"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Wind and Pressure"
+            android:textColor="#c6c6c6"
+            android:textSize="25sp"
+            android:layout_weight="0.15"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/windmillIV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/windmill"
+                />
+
+            <TextView
+                android:id="@+id/windspdTV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="#c6c6c6"
+                android:text="Wind"
+                />
+            <TextView
+                android:id="@+id/pressureTV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#c6c6c6"
+                android:text="Pressure"
+                android:textSize="16dp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
